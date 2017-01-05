@@ -34,7 +34,7 @@ app.use(webpackDevMiddleware(compiler, {
 }));
 app.use(require('webpack-hot-middleware')(compiler));
 
-app.get('/group/:groupId/users', (req, res, next) => {
+app.get('/group/api/groups/:groupId/users', (req, res, next) => {
   const total = 12;
   const data = {
     total,

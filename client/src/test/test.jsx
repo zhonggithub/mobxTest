@@ -2,7 +2,9 @@ import React from 'react';
 import { observer } from 'mobx-react';
 import { Table } from 'antd';
 import { ZTable } from '../components';
+import { testStore } from '../stores';
 
+@observer
 export default class Test extends React.Component {
   constructor(props) {
     super(props);
@@ -35,30 +37,22 @@ export default class Test extends React.Component {
   }
 
   componentDidMount() {
-    const data = [];
-    const total = 160;
-    for (let i = 0; i < total; i += 1) {
-      data.push({
-        key: Math.random(),
-        id: Math.random(),
-        name: `${Math.random()}test${i}`,
-        tel: `${Math.random()}`
-      });
-    }
-    const pagination = this.state.pagination;
-    pagination.total = total;
-    this.setState({ data, pagination });
+    testStore.fetchData().then(ret => {
+      testStore.data = ret.data.items;
+    }).catch(err => {
+      console.log(err);
+    });
   }
 
   render() {
     return <ZTable
       bordered
-      disableLeftTitle
-      disableColumnMenu
+      //disableLeftTitle
+      //disableColumnMenu
       size="small"
       columns={ this.state.columns }
       loading={ this.state.loading }
-      dataSource={ this.props.data }
+      dataSource={ testStore.data }
       pagination={ this.state.pagination }
     />
   }
