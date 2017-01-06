@@ -3,8 +3,8 @@ import { Icon } from 'antd';
 
 require('../style/iconfont.css');
 
-export default class DefIcon extends React.Component {
-    static PropTypes = {
+export default class ZIcon extends React.Component {
+    static propTypes = {
         icon: React.PropTypes.string,
         iconfont: React.PropTypes.string,
         size: React.PropTypes.string,

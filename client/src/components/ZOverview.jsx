@@ -9,7 +9,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import { Card, Col, Row, Icon } from 'antd';
 
-export default class DefOverview extends React.Component {
+export default class ZOverview extends React.Component {
   static PropTypes ={
     data: React.PropTypes.array,
     title: React.PropTypes.string,

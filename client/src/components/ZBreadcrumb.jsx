@@ -13,7 +13,7 @@ import { Link } from 'react-router';
 import './style.less';
 import '../style/iconfont.css';
 
-export default class DefBreadcrumb extends React.Component {
+export default class ZDefBreadcrumb extends React.Component {
   static PropTypes = {
     items : React.PropTypes.array,
   }
