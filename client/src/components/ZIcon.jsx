@@ -5,9 +5,9 @@ require('../style/iconfont.css');
 
 export default class ZIcon extends React.Component {
     static propTypes = {
-        icon: React.PropTypes.string,
-        iconfont: React.PropTypes.string,
-        size: React.PropTypes.string,
+      icon: React.PropTypes.string,
+      iconfont: React.PropTypes.string,
+      size: React.PropTypes.string,
     }
 
     constructor(props) {
@@ -15,8 +15,8 @@ export default class ZIcon extends React.Component {
     }
 
     render () {
-        if(this.props.icon)
-            return <Icon type={this.props.icon} style={{fontSize: this.props.size || '16px'}} />
-        return (<i className="iconfont" style={{marginLeft: this.props.marginLeft, marginRight: this.props.marginRight || '5px', fontSize: this.props.size || '16px'}}>{ this.props.iconfont} </i>);
+      if(this.props.icon)
+        return <Icon type={this.props.icon} style={{fontSize: this.props.size || '16px'}} />
+      return (<i className="iconfont" style={{marginLeft: this.props.marginLeft, marginRight: this.props.marginRight || '5px', fontSize: this.props.size || '16px'}}>{ this.props.iconfont} </i>);
     }
 }

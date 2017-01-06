@@ -14,7 +14,7 @@ import './style.less';
 
 const SubMenu = Menu.SubMenu;
 
-export default class SideNavigation extends React.Component {
+export default class ZSideNavigation extends React.Component {
   static propTypes = {
     collapse: React.PropTypes.bool,
     defaultSelectedKeys: React.PropTypes.array,

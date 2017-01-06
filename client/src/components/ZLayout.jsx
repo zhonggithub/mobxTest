@@ -22,7 +22,7 @@ export default class ZLayout extends React.Component {
 
   onCollapseChange = () => {
     this.setState({
-        collapse: !this.state.collapse,
+      collapse: !this.state.collapse,
     });
   }
 
