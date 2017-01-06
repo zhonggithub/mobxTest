@@ -38,7 +38,7 @@ export default class Test extends React.Component {
   }
 
   componentDidMount() {
-    testStore.pagination = this.state.pagination;
+    //testStore.pagination = this.state.pagination;
     this.fetch();
   }
 
