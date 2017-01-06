@@ -10,7 +10,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'mobx-react';
 import { Router, Route, browserHistory, IndexRoute, IndexRedirect } from 'react-router';
 import { Login, PageLoginIndex } from './login';
-import { Layout, FUpload, FileUpload, BaiDuUeditor } from './components';
+import { Layout, FUpload, FileUpload, BaiDuUeditor, ZRich, } from './components';
 import { Test, SideNavigationTest } from './test';
 import stores from './stores';
 
@@ -22,7 +22,7 @@ function auth(nextState, replace) {
   }
 }
 
-ReactDOM.render(<SideNavigationTest />, mountNode);
+ReactDOM.render(<ZRich />, mountNode);
 
 // ReactDOM.render((
 //   <Provider {...stores}>

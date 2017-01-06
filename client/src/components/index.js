@@ -17,6 +17,7 @@ import ZPictureShow from './ZPictureShow';
 import ZFUpload from './ZFUpload';
 //import BaiDuUeditor from './BaiDuUeditor';
 import ZTable from './ZTable';
+import ZRich from './ZRich';
 
 module.exports = {
     ZLayout,
@@ -38,4 +39,5 @@ module.exports = {
     ZFUpload,
     //BaiDuUeditor,
     ZTable,
+    ZRich,
 }

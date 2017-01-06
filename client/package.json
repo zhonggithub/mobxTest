@@ -38,6 +38,7 @@
   "dependencies": {
     "antd": "^2.6.0",
     "cross-env": "^3.1.4",
+    "draft-js": "^0.9.1",
     "html-webpack-plugin": "^2.26.0",
     "isomorphic-fetch": "^2.2.1",
     "mathquill": "^0.10.1-a",
