@@ -33,12 +33,21 @@ export default class Test extends React.Component {
           return `共 ${total} 条`;
         }
       },
+      data: []
     }
   }
 
   componentDidMount() {
+    testStore.pagination = this.state.pagination;
+    this.fetch();
+  }
+
+  fetch(params={}) {
     testStore.fetchData().then(ret => {
       testStore.data = ret.data.items;
+      this.setState({ data: ret.data.items });
+      console.log(ret.data.items);
+      console.log(typeof testStore.data, typeof ret.data.items, typeof this.state.data);
     }).catch(err => {
       console.log(err);
     });
@@ -49,10 +58,13 @@ export default class Test extends React.Component {
       bordered
       //disableLeftTitle
       //disableColumnMenu
+      //disableSearchInput
       size="small"
+      rowKey={record => record.id}
       columns={ this.state.columns }
       loading={ this.state.loading }
-      dataSource={ testStore.data }
+      dataSource={ testStore.data.slice() }
+      //dataSource={ this.state.data }
       pagination={ this.state.pagination }
     />
   }
