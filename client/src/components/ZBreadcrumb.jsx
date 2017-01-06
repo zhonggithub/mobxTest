@@ -14,8 +14,8 @@ import './style.less';
 import '../style/iconfont.css';
 
 export default class ZDefBreadcrumb extends React.Component {
-  static PropTypes = {
-    items : React.PropTypes.array,
+  static propTypes = {
+    items : React.PropTypes.array.isRequired,
   }
 
   constructor(props){

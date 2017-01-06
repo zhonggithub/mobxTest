@@ -14,7 +14,7 @@ import ZDatePicker from './ZDatePicker';
 const Option = Select.Option;
 
 export default class ZStatistics extends React.Component {
-    static PropTypes = {
+    static propTypes = {
         config: React.PropTypes.object,
         title: React.PropTypes.string,
         onChange: React.PropTypes.func, //时间选择器回调函数,接受两个参数: dates, dateStrings
